@@ -34,18 +34,21 @@ patients. */
 -- Calculate the frequency of each variant in healthy patients.
 -- Compute the absolute difference in frequencies for each variant.
 -- Return the top 5 variants with the highest absolute difference in frequencies.
-
--- Current Answer, need to figure out percentage and only include variants contributing to disease
 WITH VariantFrequencies AS (
 	SELECT variant_id, disease_status, COUNT(*) AS frequency
 	FROM patients
 	GROUP BY variant_id, disease_status
 ),
+TotalCounts AS (
+	SELECT variant_id, COUNT(*) AS total_count
+	FROM patients
+	GROUP BY variant_id
+),
 VariantDifferences AS (
 	SELECT vf1.variant_id,
-	COALESCE(vf1.frequency, 0) AS diseased_frequency,
-    COALESCE(vf2.frequency, 0) AS healthy_frequency,
-	ABS(COALESCE(vf1.frequency,0) - COALESCE(vf2.frequency,0)) AS frequency_difference
+	COALESCE(vf1.frequency, 0) * 1.0 / (SELECT total_count FROM TotalCounts WHERE variant_id = vf1.variant_id) AS diseased_frequency,
+    COALESCE(vf2.frequency, 0) * 1.0 / (SELECT total_count FROM TotalCounts WHERE variant_id = vf1.variant_id) AS healthy_frequency,
+	ABS(COALESCE(vf1.frequency,0) * 1.0 / (SELECT total_count FROM TotalCounts WHERE variant_id = vf1.variant_id) - COALESCE(vf2.frequency,0)* 1.0 / (SELECT total_count FROM TotalCounts WHERE variant_id = vf1.variant_id)) AS frequency_difference
 	FROM VariantFrequencies vf1
 	LEFT JOIN VariantFrequencies vf2
 		ON vf1.variant_id = vf2.variant_id AND vf2.disease_status = 'healthy'
@@ -53,23 +56,8 @@ VariantDifferences AS (
 		ON vf1.variant_id = vf3.variant_id AND vf3.disease_status = 'diseased'
 	WHERE vf1.disease_status = 'diseased'
 )
-SELECT variants.*, VariantDifferences.frequency_difference
+SELECT variants.variant_id, VariantDifferences.diseased_frequency,VariantDifferences.healthy_frequency, VariantDifferences.frequency_difference
 FROM VariantDifferences
 JOIN variants ON VariantDifferences.variant_id = variants.variant_id
 ORDER BY frequency_difference DESC
 LIMIT 5;
-
-/* Expected Output:
-The query should return the following columns:
-variant_id: The unique identifier for the genetic variant.
-diseased_frequency: The frequency of the variant in diseased patients.
-healthy_frequency: The frequency of the variant in healthy patients.
-frequency_difference: The absolute difference in frequencies between diseased 
-and healthy patients. */
-
-/* Notes:
-Ensure that your query handles cases where a variant might be present in only 
-diseased or only healthy patients.
-Consider edge cases where the number of patients is very small or where 
-variants are extremely rare. */
-
