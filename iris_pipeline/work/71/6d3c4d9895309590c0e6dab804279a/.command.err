@@ -1,0 +1,2 @@
+usage: slice.py [-h] input_file output_dir
+slice.py: error: the following arguments are required: output_dir

@@ -1,0 +1,4 @@
+  File "/Users/dmunselt/Documents/AICodingAssess/iris_pipeline/work/30/c6e2c1d6cd494cb54b5cc3a41ad1d6/slice.py", line 16
+    df_group1.to_csv('group1.csv'), index=False)
+                                               ^
+SyntaxError: unmatched ')'
