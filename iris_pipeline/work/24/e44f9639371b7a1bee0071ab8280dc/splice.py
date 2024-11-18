@@ -1,1 +1,0 @@
-/Users/dmunselt/Documents/AICodingAssess/iris_pipeline/scripts/splice.py

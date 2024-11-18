@@ -8,8 +8,8 @@ def run_linear_regression(input_file):
     data = pd.read_csv(input_file)
 
     # Prepare the data
-    X = df.drop(['Species'], axis=1)
-    y = df['Species']
+    X = data.drop(['Species'], axis=1)
+    y = data['Species']
 
     # Perform linear regression
     model = LinearRegression()
@@ -23,6 +23,7 @@ def run_linear_regression(input_file):
     }
 
     # Write to output file
+    # update to include basename
     pd.DataFrame([result]).to_csv('linear_regression_output.csv', index=False)
     print(f"Saved results to linear_regression_output.csv")
 

@@ -1,4 +1,5 @@
 process SLICE_DATA {
+    // container
     input:
     path input_file  // Input file path
     path python_script // Python script path

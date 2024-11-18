@@ -1,14 +1,15 @@
 process FIT_MODEL {
+    publishDir "results"
     input:
-    path "*csv"
-    // path python_script2 // Python script path
+    tuple val(ID), path(input_file), path(python_script2)
 
     output:
-    "linear_regression_output.csv"
+    path("*linear_regression_output.csv")
 
     script:
     """
     # Call Python with the script and input file
-    python3 $python_script $input_file
+    python3 $python_script2 $input_file
+    mv linear_regression_output.csv "${ID}_linear_regression_output.csv"
     """
 }

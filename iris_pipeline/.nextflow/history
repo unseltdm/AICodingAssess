@@ -45,3 +45,17 @@
 2024-11-18 15:48:15	-	loquacious_solvay	-	e798c8133fe8e2026739a2358e4102e8	0277b40e-ec77-4b10-acb0-7a58588b1f5a	nextflow run main.nf
 2024-11-18 15:48:56	-	naughty_hilbert	-	e798c8133fe8e2026739a2358e4102e8	f2130b75-c7f6-4e11-97c6-ac0a1dddf639	nextflow run main.nf
 2024-11-18 15:49:18	3.3s	stoic_meninsky	OK	e798c8133fe8e2026739a2358e4102e8	8160fc3b-d094-4a60-aa72-d282e2a46000	nextflow run main.nf
+2024-11-18 16:29:06	4.8s	nauseous_waddington	OK	e798c8133fe8e2026739a2358e4102e8	49937bac-d9f4-47fd-99a6-bdd6f3a2646b	nextflow run main.nf
+2024-11-18 16:30:22	2.6s	admiring_kowalevski	OK	0afcac3d0d53797720345f572c8ae994	0b874d34-b168-479e-b099-a3aa23be67fe	nextflow run main.nf
+2024-11-18 16:31:05	2.3s	dreamy_pare	OK	63b26b12b3fe4ad0f78a59a9760f1859	786c2e70-2d71-4c01-8b3a-31c4eda8d7ca	nextflow run main.nf --resume
+2024-11-18 16:31:31	2.4s	lethal_volta	OK	3ed2c9bccf2b62f19f409ff6787fe969	e307e84e-fe19-4f12-9706-6382c51abafe	nextflow run main.nf --resume
+2024-11-18 16:31:57	-	fervent_kalman	-	100b5be8846ac6890ede9b54aec83cf3	e9222ff5-966b-44c7-9f8a-6b569534cc99	nextflow run main.nf --resume
+2024-11-18 16:32:23	1.9s	sharp_easley	OK	433d6e0ef7afcc432a5513e462a8ddec	a107db0f-0570-41a8-a456-7a1f20d91430	nextflow run main.nf
+2024-11-18 16:39:39	2.5s	stupefied_edison	OK	ece6e6b32875c38122feb4886f40d8af	438c135d-b309-46ee-9c77-1772926665ad	nextflow run main.nf
+2024-11-18 16:43:11	-	dreamy_goldberg	-	2fd2c7ac6fbf2175ead46798acb2d7b4	b8745fbb-9221-4273-8ffd-1d40af42df02	nextflow run main.nf
+2024-11-18 16:43:35	5.7s	jovial_nobel	ERR	7d9fc95655957f2e6b4e9c9009881cc4	cce68b3b-a259-4f1b-9947-60244d568777	nextflow run main.nf
+2024-11-18 16:44:14	4s	marvelous_gutenberg	OK	7d9fc95655957f2e6b4e9c9009881cc4	8123a176-f991-4a98-a983-81075c764046	nextflow run main.nf
+2024-11-18 16:46:19	4.2s	festering_austin	OK	7d9fc95655957f2e6b4e9c9009881cc4	7ec286ae-ab75-4f51-b1cc-eced204ec278	nextflow run main.nf
+2024-11-18 16:48:36	4.5s	ecstatic_curie	OK	6266f4cecf5f85685bbcdc27769557c7	9e1a5a22-b1f2-4820-91d3-54d9e31e7ba8	nextflow run main.nf
+2024-11-18 16:50:55	4.3s	amazing_jepsen	OK	4ef6f28b6210cdd428e97a9ba0467f16	027a166c-c84d-4a62-8c0c-036e0a66b4f4	nextflow run main.nf
+2024-11-18 16:55:14	4.9s	festering_babbage	OK	f3101152ea4c6ef1ce6c50a751cb13bf	ed67c686-8496-4dd6-bd28-5c436682df04	nextflow run main.nf
