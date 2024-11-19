@@ -11,6 +11,6 @@ process SLICE_DATA {
     script:
     """
     # Call Python with the script and input file
-    docker run iris_pipeline python3 /scripts/slice_data_final.py /data/Iris.csv
+    python3 /opt/pipeline/scripts/slice_data_final.py $input_file
     """
 }

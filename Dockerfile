@@ -1,11 +1,10 @@
 # docker build . -t iris_pipeline
-FROM python:latest
+FROM python:3.13.0
 
-RUN pip install pandas scikit-learn
-RUN mkdir -p data scripts modules
-COPY data/Iris.csv data
-COPY scripts/slice_data_final.py /scripts/
-COPY scripts/fit.py /scripts/
-COPY modules/slice_data_final.nf /modules/
-COPY modules/fit_model.nf /modules/
-COPY output/ /output/
+RUN pip install pandas==2.2.1 scikit-learn==1.5.1
+
+WORKDIR /opt/pipeline/
+
+RUN mkdir -p /opt/pipeline/data /opt/pipeline/scripts
+# COPY data/Iris.csv /opt/pipeline/data
+COPY scripts/ /opt/pipeline/scripts/
