@@ -1,4 +1,5 @@
 process COMBINE_RESULTS {
+    container 'iris_pipeline:latest'
     publishDir "results"
 
     input:

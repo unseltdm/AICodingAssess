@@ -87,3 +87,17 @@
 2024-11-18 18:15:00	2.9s	awesome_visvesvaraya	ERR	d5aecfe3c720c995690efc95a469c094	5085fdc0-0159-4a05-b3b9-5f3c725c7fd7	nextflow run main.nf
 2024-11-18 18:18:05	2.8s	clever_volhard	ERR	d5aecfe3c720c995690efc95a469c094	06891aa1-e1b3-499b-972e-c8c5a074a038	nextflow run main.nf
 2024-11-18 18:48:13	4.2s	intergalactic_borg	ERR	d5aecfe3c720c995690efc95a469c094	e52a9144-35ed-46f1-8aea-b2bb511c0a77	nextflow run main.nf
+2024-11-19 10:45:31	2.4s	golden_goldwasser	ERR	d5aecfe3c720c995690efc95a469c094	edafef41-afa7-4b0e-bbb0-60570b7b9707	nextflow run main.nf --input_file data/Iris.csv
+2024-11-19 10:51:20	1.9s	adoring_crick	ERR	d5aecfe3c720c995690efc95a469c094	857ce026-ed01-48b0-be9c-654098b4d44d	nextflow run main.nf --input_file data/Iris.csv
+2024-11-19 10:55:10	3.5s	backstabbing_carlsson	OK	d5aecfe3c720c995690efc95a469c094	f5d4b157-95e9-4722-afea-0409d9f83f45	nextflow run main.nf --input_file data/Iris.csv
+2024-11-19 11:03:20	11.5s	sleepy_volta	OK	0d882ba9e39bfd59ea46b3d8d6455895	83efad0b-9ab6-4bba-9121-b95ce4b2e4b1	nextflow run main.nf --input_file data/Iris.csv
+2024-11-19 11:06:28	3.5s	angry_blackwell	ERR	5e124d5139cc76d78715fa7cb03df3fa	14e5e8cc-f2e3-4c7a-9252-ea1e171953bf	nextflow run main.nf --input_file data/Iris.csv
+2024-11-19 11:18:04	-	exotic_heyrovsky	-	d726117193d1b4928e96e9aa61fde927	a41e5ea1-8d4b-4dcb-8908-784aa96ee83f	nextflow run main.nf data/Iris.csv
+2024-11-19 11:23:20	9.6s	friendly_mendel	OK	010bc6a9fcd65e1d6c64cc07396fea8e	b8cd5c1b-6266-43e1-ad3f-52b4f5e2ba94	nextflow run main.nf --input_file data/Iris.csv
+2024-11-19 11:23:53	2.8s	furious_gutenberg	OK	427f316f308026326ec5a79cf6d480bb	ab8ceac9-6b3e-4e0c-9e2e-f64c3f47d8e6	nextflow run main.nf --input_file data/Iris.csv
+2024-11-19 11:24:06	3s	clever_dalembert	OK	677bc1ef6c39b2a659caac480d365226	021822a7-a879-4b0f-b8cf-0ac1aa88bf2d	nextflow run main.nf --input_file data/Iris.csv
+2024-11-19 11:25:12	3.1s	mad_brahmagupta	OK	677bc1ef6c39b2a659caac480d365226	a7539275-c903-4bc3-85d5-4f6e17ad917f	nextflow run main.nf --input_file data/Iris.csv
+2024-11-19 11:26:22	2.8s	awesome_cray	ERR	2808a7878e4e488b76f8bb151092ffc9	43ddab44-dbf2-4179-8844-1e1c785fedc4	nextflow run main.nf --input_file data/Iris.csv
+2024-11-19 11:27:04	6.8s	clever_shockley	OK	2808a7878e4e488b76f8bb151092ffc9	f96a5b43-4220-43b2-bb55-079dc6ceedc7	nextflow run main.nf --input_file data/Iris.csv
+2024-11-19 11:27:53	6.3s	ridiculous_gilbert	OK	77a68e51751baa117116a07bdcec917f	d4986f3c-8982-40b9-9599-ae1508c6c2d7	nextflow run main.nf --input_file data/Iris.csv
+2024-11-19 11:29:09	7.1s	scruffy_lagrange	OK	bc51d67b8ee246cdd85fa5ba5fbd863d	f7aa84ff-6c72-43dd-9651-dce5dbe0a2f8	nextflow run main.nf --input_file data/Iris.csv

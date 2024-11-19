@@ -1,6 +1,6 @@
 process SLICE_DATA {
     container 'iris_pipeline:latest'
-    publishDir "results_test"
+    publishDir "results"
 
     input:
     path(input_file)

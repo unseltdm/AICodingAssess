@@ -29,7 +29,7 @@ def run_linear_regression(input_file):
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Usage: python fit.py <input_file>")
+        print("Usage: python3 fit.py <input_file>")
         sys.exit(1)
 
     input_file = sys.argv[1]
