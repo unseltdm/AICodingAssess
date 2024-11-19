@@ -101,3 +101,7 @@
 2024-11-19 11:27:04	6.8s	clever_shockley	OK	2808a7878e4e488b76f8bb151092ffc9	f96a5b43-4220-43b2-bb55-079dc6ceedc7	nextflow run main.nf --input_file data/Iris.csv
 2024-11-19 11:27:53	6.3s	ridiculous_gilbert	OK	77a68e51751baa117116a07bdcec917f	d4986f3c-8982-40b9-9599-ae1508c6c2d7	nextflow run main.nf --input_file data/Iris.csv
 2024-11-19 11:29:09	7.1s	scruffy_lagrange	OK	bc51d67b8ee246cdd85fa5ba5fbd863d	f7aa84ff-6c72-43dd-9651-dce5dbe0a2f8	nextflow run main.nf --input_file data/Iris.csv
+2024-11-19 11:38:21	15.2s	soggy_carson	OK	bc51d67b8ee246cdd85fa5ba5fbd863d	76f7a6c7-e3d1-4b09-aed7-caf7fc982e6e	nextflow run main.nf data/Iris.csv
+2024-11-19 11:42:35	-	agitated_leavitt	-	bc51d67b8ee246cdd85fa5ba5fbd863d	1c911cad-3959-4db8-918e-e94f5ba67cef	nextflow run main.nf data/Iris.csv
+2024-11-19 11:42:59	3s	insane_leavitt	ERR	5c929f5803fc9d9513a3e34294dff1ba	0efc3a64-57ec-4b01-b3c8-f108cf1d3fd4	nextflow run main.nf data/Iris.csv
+2024-11-19 11:45:12	7.1s	fervent_poitras	OK	5c929f5803fc9d9513a3e34294dff1ba	ae1357e0-3136-4c9f-9d58-114a1df30a68	nextflow run main.nf data/Iris.csv

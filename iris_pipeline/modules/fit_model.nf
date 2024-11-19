@@ -1,6 +1,7 @@
 process FIT_MODEL {
-    container 'iris_pipeline:latest'
+    container 'iris_pipeline:1.0.0'
     publishDir "results"
+    
     input:
     tuple val(ID), path(input_file)
 

@@ -1,0 +1,82 @@
+Nov-19 11:38:20.207 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf data/Iris.csv
+Nov-19 11:38:20.451 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 24.10.0
+Nov-19 11:38:20.489 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/Users/dmunselt/.nextflow/plugins; core-plugins: nf-amazon@2.9.0,nf-azure@1.10.1,nf-cloudcache@0.4.2,nf-codecommit@0.2.2,nf-console@1.1.4,nf-google@1.15.2,nf-tower@1.9.3,nf-wave@1.7.2
+Nov-19 11:38:20.526 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Nov-19 11:38:20.527 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Nov-19 11:38:20.532 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Nov-19 11:38:20.548 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Nov-19 11:38:20.577 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /Users/dmunselt/Documents/AICodingAssess/iris_pipeline/nextflow.config
+Nov-19 11:38:20.581 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/dmunselt/Documents/AICodingAssess/iris_pipeline/nextflow.config
+Nov-19 11:38:20.622 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /Users/dmunselt/.nextflow/secrets/store.json
+Nov-19 11:38:20.626 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@4463d9d3] - activable => nextflow.secret.LocalSecretsProvider@4463d9d3
+Nov-19 11:38:20.635 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Nov-19 11:38:21.232 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
+Nov-19 11:38:21.252 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [soggy_carson] DSL2 - revision: bc51d67b8e
+Nov-19 11:38:21.254 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Nov-19 11:38:21.254 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Nov-19 11:38:21.321 [main] DEBUG nextflow.Session - Session UUID: 76f7a6c7-e3d1-4b09-aed7-caf7fc982e6e
+Nov-19 11:38:21.321 [main] DEBUG nextflow.Session - Run name: soggy_carson
+Nov-19 11:38:21.322 [main] DEBUG nextflow.Session - Executor pool size: 8
+Nov-19 11:38:21.332 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Nov-19 11:38:21.340 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Nov-19 11:38:21.378 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 24.10.0 build 5928
+  Created: 27-10-2024 18:36 UTC (14:36 EDT)
+  System: Mac OS X 12.7.6
+  Runtime: Groovy 4.0.23 on Java HotSpot(TM) 64-Bit Server VM 23.0.1+11-39
+  Encoding: UTF-8 (UTF-8)
+  Process: 85349@desirees-mbp.lan [192.168.86.28]
+  CPUs: 8 - Mem: 16 GB (965.1 MB) - Swap: 4 GB (1.6 GB)
+Nov-19 11:38:21.398 [main] DEBUG nextflow.Session - Work-dir: /Users/dmunselt/Documents/AICodingAssess/iris_pipeline/work [Mac OS X]
+Nov-19 11:38:21.399 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /Users/dmunselt/Documents/AICodingAssess/iris_pipeline/bin
+Nov-19 11:38:21.412 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Nov-19 11:38:21.424 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Nov-19 11:38:21.457 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Nov-19 11:38:21.471 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 9; maxThreads: 1000
+Nov-19 11:38:21.545 [main] DEBUG nextflow.Session - Session start
+Nov-19 11:38:21.832 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Nov-19 11:38:22.118 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Nov-19 11:38:22.119 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-19 11:38:22.128 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Nov-19 11:38:22.139 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=16 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+Nov-19 11:38:22.143 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Nov-19 11:38:22.268 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Nov-19 11:38:22.268 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-19 11:38:22.285 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Nov-19 11:38:22.285 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-19 11:38:22.288 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: COMBINE_RESULTS, SLICE_DATA, FIT_MODEL
+Nov-19 11:38:22.289 [main] DEBUG nextflow.Session - Igniting dataflow network (4)
+Nov-19 11:38:22.297 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > SLICE_DATA
+Nov-19 11:38:22.298 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FIT_MODEL
+Nov-19 11:38:22.298 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > COMBINE_RESULTS
+Nov-19 11:38:22.299 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_d0e2500ca1f96824: /Users/dmunselt/Documents/AICodingAssess/iris_pipeline/./modules/combine_results.nf
+  Script_cf1130ed92b2f1db: /Users/dmunselt/Documents/AICodingAssess/iris_pipeline/./modules/slice_data_final.nf
+  Script_a5a2ed6ed8637451: /Users/dmunselt/Documents/AICodingAssess/iris_pipeline/main.nf
+  Script_2c72fb0b402b9d4b: /Users/dmunselt/Documents/AICodingAssess/iris_pipeline/./modules/fit_model.nf
+Nov-19 11:38:22.299 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Nov-19 11:38:22.299 [main] DEBUG nextflow.Session - Session await
+Nov-19 11:38:22.524 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-19 11:38:22.526 [Task submitter] INFO  nextflow.Session - [8d/d8f13f] Submitted process > SLICE_DATA (1)
+Nov-19 11:38:30.919 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: SLICE_DATA (1); status: COMPLETED; exit: 0; error: -; workDir: /Users/dmunselt/Documents/AICodingAssess/iris_pipeline/work/8d/d8f13f9f5e1c2c816a669ea75f41c9]
+Nov-19 11:38:30.920 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Nov-19 11:38:30.999 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-19 11:38:31.000 [Task submitter] INFO  nextflow.Session - [ab/397ef0] Submitted process > FIT_MODEL (2)
+Nov-19 11:38:31.011 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-19 11:38:31.011 [Task submitter] INFO  nextflow.Session - [c0/9d0332] Submitted process > FIT_MODEL (3)
+Nov-19 11:38:31.021 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-19 11:38:31.022 [Task submitter] INFO  nextflow.Session - [2f/9b4e8e] Submitted process > FIT_MODEL (1)
+Nov-19 11:38:35.307 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: FIT_MODEL (3); status: COMPLETED; exit: 0; error: -; workDir: /Users/dmunselt/Documents/AICodingAssess/iris_pipeline/work/c0/9d033243423cd921e2418f14516a31]
+Nov-19 11:38:35.334 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: FIT_MODEL (1); status: COMPLETED; exit: 0; error: -; workDir: /Users/dmunselt/Documents/AICodingAssess/iris_pipeline/work/2f/9b4e8e82c9d1c46ea129335abc8030]
+Nov-19 11:38:35.356 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: FIT_MODEL (2); status: COMPLETED; exit: 0; error: -; workDir: /Users/dmunselt/Documents/AICodingAssess/iris_pipeline/work/ab/397ef07f7dc1e308004fddb13da882]
+Nov-19 11:38:35.383 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-19 11:38:35.384 [Task submitter] INFO  nextflow.Session - [27/e54cbc] Submitted process > COMBINE_RESULTS
+Nov-19 11:38:35.927 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: COMBINE_RESULTS; status: COMPLETED; exit: 0; error: -; workDir: /Users/dmunselt/Documents/AICodingAssess/iris_pipeline/work/27/e54cbc693213dfcb6300fd1db67485]
+Nov-19 11:38:35.935 [main] DEBUG nextflow.Session - Session await > all processes finished
+Nov-19 11:38:36.032 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Nov-19 11:38:36.033 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Nov-19 11:38:36.036 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'TaskFinalizer' shutdown completed (hard=false)
+Nov-19 11:38:36.047 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=5; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=21.6s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=3; peakCpus=3; peakMemory=3 GB; ]
+Nov-19 11:38:36.177 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Nov-19 11:38:36.222 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Nov-19 11:38:36.223 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

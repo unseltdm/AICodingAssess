@@ -2,7 +2,7 @@
 nextflow.enable.dsl=2
 
 // Include the process module
-include { SLICE_DATA } from './modules/slice_data_final'
+include { SLICE_DATA } from './modules/slice_data'
 include { FIT_MODEL } from './modules/fit_model'
 include { COMBINE_RESULTS } from './modules/combine_results'
 
