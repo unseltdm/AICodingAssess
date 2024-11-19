@@ -9,8 +9,9 @@ are in improving stuff you use.
 
 - Limitations, gotchas, bugs
   1. Can be memory intensive with large datasets requiring access to sufficient memory
-  2. Relies on other libraries, such as NumPy, for better data manipulation
-  3. Have to be careful when performing date and time manipulation, need to take into account timezones, daylight saving, and leap years.
+  2. Have to be careful when performing date and time manipulation, need to take into account timezones, daylight saving, and leap years.
      
-- Improvement
+- Improvements
   1. Implement standard chunking criteria to enable more efficient data processing. This would decrease the amount of memory used at one time and improve performance.
+  2. Datetime can cause a lot of issues in datasets. An improvement that could be added to pandas is process_datetime_column(), where the input is a dataframe containing various timestamps (['2024-01-01 12:34:56', '2024-02-15 08:22:10', None, 'invalid', '11/21/2022']) and it converts all rows to a user-specified format, including timezone. This improvement would also allow extraction of specific datetime features (e.g., Year and Month only), aiding in better data manipulation. 
+
