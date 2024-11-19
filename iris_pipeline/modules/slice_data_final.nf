@@ -1,8 +1,9 @@
 process SLICE_DATA {
-    // container
+    container 'iris_pipeline:latest'
+    publishDir "results_test"
+
     input:
-    path input_file  // Input file path
-    path python_script // Python script path
+    path(input_file)
 
     output:
     path("*.csv")
@@ -10,6 +11,6 @@ process SLICE_DATA {
     script:
     """
     # Call Python with the script and input file
-    python3 $python_script $input_file
+    docker run iris_pipeline python3 /scripts/slice_data_final.py /data/Iris.csv
     """
 }

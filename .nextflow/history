@@ -1,0 +1,6 @@
+2024-11-18 09:07:43	1.1s	happy_mcclintock	OK	00000000000000000000000000000000	7976e91f-c696-42fa-837b-b82914e35471	nextflow run basic_nextflow.nf
+2024-11-18 09:10:05	1s	tender_elion	OK	00000000000000000000000000000000	21352854-85c1-442e-ad50-7fdc31be0bfa	nextflow run basic_nextflow.nf --in ./sample.fasta
+2024-11-18 09:10:43	1.4s	dreamy_angela	OK	00000000000000000000000000000000	e660c028-ea95-4d6d-a4fd-357d21410719	nextflow run basic_nextflow.nf --in ./sample.fa
+2024-11-18 09:12:29	748ms	sick_galileo	OK	00000000000000000000000000000000	8c40093e-7e5c-4082-b7b0-e779402c3a6a	nextflow run basic_nextflow.nf --in ./sample.fa
+2024-11-18 09:15:38	-	voluminous_minsky	-	1f42581dbf3fe1b10516f0d3dfd04b40	310be24c-8705-491f-847a-ae598b9e1257	nextflow run basic_nextflow.nf
+2024-11-18 09:16:18	-	mad_solvay	-	8ab8d07a3dd6c50c30a4346c1fb46e65	bae88716-806d-4af6-b969-240ed4c7c863	nextflow run basic_nextflow.nf
