@@ -14,13 +14,11 @@ workflow {
 
     // Run the Python script using the input file
     result = SLICE_DATA(input_file)
-    // result.view()
+    
     // Print the output of the Python script (number of lines)
     model_input_ch = result
                         .flatten()
                          .map{tuple it.getSimpleName(),it}
-    //                    .map{tuple it.getSimpleName(),it}.combine(python_script2)
-    // model_input_ch.view()
 
     FIT_MODEL(model_input_ch)
 
