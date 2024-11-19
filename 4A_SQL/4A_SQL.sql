@@ -46,15 +46,14 @@ TotalCounts AS (
 ),
 VariantDifferences AS (
 	SELECT vf1.variant_id,
-	COALESCE(vf1.frequency, 0) * 1.0 / (SELECT total_count FROM TotalCounts WHERE variant_id = vf1.variant_id) AS diseased_frequency,
-    COALESCE(vf2.frequency, 0) * 1.0 / (SELECT total_count FROM TotalCounts WHERE variant_id = vf1.variant_id) AS healthy_frequency,
-	ABS(COALESCE(vf1.frequency,0) * 1.0 / (SELECT total_count FROM TotalCounts WHERE variant_id = vf1.variant_id) - COALESCE(vf2.frequency,0)* 1.0 / (SELECT total_count FROM TotalCounts WHERE variant_id = vf1.variant_id)) AS frequency_difference
+	MAX(COALESCE(CASE WHEN vf1.disease_status = 'diseased' THEN vf1.frequency ELSE 0 END,0) * 1.0 / tc1.total_count) AS diseased_frequency,
+	MAX(COALESCE(CASE WHEN vf1.disease_status = 'healthy' THEN vf1.frequency ELSE 0 END,0) * 1.0 / tc1.total_count) AS healthy_frequency,
+	ABS(MAX(COALESCE(CASE WHEN vf1.disease_status = 'diseased' THEN vf1.frequency ELSE 0 END,0) * 1.0 / tc1.total_count) - MAX(COALESCE(CASE WHEN vf1.disease_status = 'healthy' THEN vf1.frequency ELSE 0 END,0)* 1.0 / tc1.total_count)) AS frequency_difference
+		
 	FROM VariantFrequencies vf1
-	LEFT JOIN VariantFrequencies vf2
-		ON vf1.variant_id = vf2.variant_id AND vf2.disease_status = 'healthy'
-	LEFT JOIN VariantFrequencies vf3
-		ON vf1.variant_id = vf3.variant_id AND vf3.disease_status = 'diseased'
-	WHERE vf1.disease_status = 'diseased'
+	LEFT JOIN TotalCounts tc1
+		ON tc1.variant_id = vf1.variant_id
+	GROUP BY vf1.variant_id
 )
 SELECT variants.variant_id, VariantDifferences.diseased_frequency,VariantDifferences.healthy_frequency, VariantDifferences.frequency_difference
 FROM VariantDifferences
